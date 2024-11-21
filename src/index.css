@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800;
+    background: linear-gradient(135deg, #f6f8ff 0%, #e9f0ff 100%);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+  
+  .premium-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600;
+  }
+  
+  .premium-shadow {
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.1),
+                0 4px 8px -4px rgba(66, 71, 249, 0.1);
+  }
+}
+
+.floating-animation {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.premium-blur {
+  backdrop-filter: blur(20px);
+}
